@@ -149,7 +149,7 @@ main{justify-content:flex-start;gap:14px;padding:max(14px,min(calc((100svh - var
 
 /* ---- sections below the card ---- */
 .stage.open{touch-action:pan-y}
-.actions{padding-inline:max(8px,env(safe-area-inset-left,0px));flex-wrap:nowrap;gap:clamp(4px,1.6vw,10px);width:100%;box-sizing:border-box}.actions .btn{flex:0 1 auto;white-space:nowrap;padding:9px clamp(8px,2.9vw,16px);font-size:clamp(12px,3.7vw,16px);letter-spacing:.05em;min-width:0}
+.actions{padding-inline:0;flex-wrap:nowrap;justify-content:space-between;gap:.3em;font-size:min(14px,calc(var(--W)*.035));width:min(calc(var(--W)*.934462),560px);box-sizing:border-box;position:relative;left:calc(var(--W)*-.0154)}.actions .btn{flex:none;white-space:nowrap;padding:.55em .8em;font-size:1em;letter-spacing:.03em;min-width:0}
 .after{display:none;width:min(calc(var(--W)*.934462),560px);margin-inline:auto;padding-block:8px 72px;padding-inline:0;flex-direction:column;gap:22px;font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;color:var(--ink)}
 .opened .after{display:flex;animation:afterIn 1s .4s ease-out both}
 @keyframes afterIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}

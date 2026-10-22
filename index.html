@@ -560,12 +560,12 @@ main{justify-content:flex-start;gap:14px;padding:max(14px,min(calc((100svh - var
   document.getElementById('next').addEventListener('click',function(){go(1)});
   album.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(1)}else if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}});
   addEventListener('load',upd);addEventListener('resize',upd);upd();
-  var el=document.getElementById('count'),target=new Date('2026-12-12T12:00:00+08:00').getTime();
-  function tick(){var d=target-Date.now();
-    if(d>0){el.innerHTML='距離我們的好日子還有<b>'+Math.ceil(d/86400000)+'</b>天'}
-    else if(d>-86400000){el.textContent='就是今天，期待見到你'}
+  var el=document.getElementById('count'),WED=Date.UTC(2026,11,12);
+  function tick(){var t=new Date(Date.now()+8*3600000),n=Math.round((WED-Date.UTC(t.getUTCFullYear(),t.getUTCMonth(),t.getUTCDate()))/86400000);
+    if(n>0){el.innerHTML='距離我們的好日子還有<b>'+n+'</b>天'}
+    else if(n===0){el.textContent='就是今天，期待見到你'}
     else{el.textContent='謝謝你來見證我們的好日子'}}
-  tick();setInterval(tick,3600000);
+  tick();setInterval(tick,60000);document.addEventListener('visibilitychange',function(){if(!document.hidden)tick()});
 })();
 
 (function(){var g=document.getElementById('gmap');if(!g)return;var f=g.querySelector('iframe'),ok=false,timer=0;function fail(){if(!ok)g.classList.add('fail')}

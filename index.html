@@ -104,11 +104,11 @@ html:not(.rdy2) .card{opacity:0!important;animation:none!important}
 .soundtip[hidden]{display:none}
 .soundtip p{margin:0}
 .soundtip .st-eyebrow{font-size:14.5px;letter-spacing:.05em;white-space:nowrap;color:rgba(255,255,255,.92)}
-.soundtip .st-wave{width:55px;height:37px;margin-top:8px;color:#fff;filter:drop-shadow(0 1px 6px rgba(8,30,56,.6))}
-.soundtip .st-title{font-size:24.7px;letter-spacing:.14em;color:#fff;padding-left:.14em}
+.soundtip .st-wave{width:47px;height:31px;margin-top:7px;color:#fff;filter:drop-shadow(0 1px 6px rgba(8,30,56,.6))}
+.soundtip .st-title{font-size:21px;letter-spacing:.14em;color:#fff;padding-left:.14em}
 .soundtip .st-sub{font-size:12.5px;letter-spacing:.14em;color:#6b8696}
-.soundtip .st-btn{margin-top:8px;display:inline-flex;align-items:center;gap:8px;appearance:none;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.85);text-shadow:inherit;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border-radius:999px;padding:13px 31px;font:inherit;font-size:19.5px;letter-spacing:.1em;cursor:pointer}
-.soundtip .st-btn svg{width:23px;height:23px}
+.soundtip .st-btn{margin-top:7px;display:inline-flex;align-items:center;gap:8px;appearance:none;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.85);text-shadow:inherit;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border-radius:999px;padding:11px 26px;font:inherit;font-size:16.6px;letter-spacing:.1em;cursor:pointer}
+.soundtip .st-btn svg{width:19.5px;height:19.5px}
 .hint{font-size:18px!important}
 .soundtip .st-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
 @keyframes tipIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -149,7 +149,7 @@ main{justify-content:flex-start;gap:14px;padding:max(14px,min(calc((100svh - var
 
 /* ---- sections below the card ---- */
 .stage.open{touch-action:pan-y}
-.actions{padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.actions{padding-inline:max(8px,env(safe-area-inset-left,0px));flex-wrap:nowrap;gap:clamp(4px,1.6vw,10px);width:100%;box-sizing:border-box}.actions .btn{flex:0 1 auto;white-space:nowrap;padding:9px clamp(8px,2.9vw,16px);font-size:clamp(12px,3.7vw,16px);letter-spacing:.05em;min-width:0}
 .after{display:none;width:min(calc(var(--W)*.934462),560px);margin-inline:auto;padding-block:8px 72px;padding-inline:0;flex-direction:column;gap:22px;font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;color:var(--ink)}
 .opened .after{display:flex;animation:afterIn 1s .4s ease-out both}
 @keyframes afterIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
